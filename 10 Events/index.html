@@ -1,0 +1,49 @@
+<html>
+   <head>
+      <title>VueJs Introduction</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+   <!-- adding the Number Via btton -->
+   <div id="aTester">
+<center><h1>Testing Click Event</h1></center>
+<button v-on:click="adder">Add</button>
+<h1>{{num_1}}+{{num_2}} ={{total}}</h1>
+</div>
+
+<!-- testing the Style Binding Via mouseover And mouseout -->
+<div id="sTester">
+	<center><h1>Testing the Style</h1></center>
+	<div v-bind:style="styleObj" v-on:mouseover="changeColor" v-on:mouseout="orignalColor"></div>
+</div>
+<!-- testign the Diffrent Event -->
+<div id="sEventer">
+<center><h1>Testing The Click</h1></center>
+	<h1><button v-bind:style="styleObj" v-on:click.once="clickedOnce">Click Once</button>={{click_1}}</h1><br><br>
+	<h1><button v-bind:style="styleObj" v-on:click="clicked">Click</button>={{click_2}}</h1>
+
+</div>
+
+<!-- using the Prevent Event -->
+<div id="preventer">
+	<center><h1>Testing the Event Preventer</h1></center>
+	<h1><a  v-on:click.prevent="tester" target="_blank" v-bind:href="linker">{{title}}</a></h1>
+</div>
+<!-- using the Enter the Event  --->
+
+<div id="eTester">
+<center><h1>Testing the Key Event</h1></center>
+<textarea cols="100" rows="5" v-on:keyup.enter="printer">{{title}}</textarea>
+{{tester}}
+</div>
+
+<!-- testing the Variosu Component -->
+<div id="buttoner">
+<center><h1>Testing The Componet Template {{langClicked}}</h1></center>
+<button-content v-for='(item,index) in languages'
+v-bind:index="index" v-bind:item="item" v-on:showlanguage="displanger"></button-content>
+</div>
+
+<script src="js/events.js"></script>
+   </body>
+</html>

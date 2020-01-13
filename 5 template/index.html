@@ -1,0 +1,25 @@
+<html>
+   <head>
+      <title>VueJs Introduction</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+     <!-- using the template-->
+	
+		<!-- tempate using -->
+		<div id="temp">
+		<h1>{{name}}</h1>
+		<div v-html="temp"></div>
+		</div>
+	<!-- image testing  -->
+	
+	<div id="imgtester">
+			<h1>{{tester}}</h1>
+			<div v-html="temp"></div>
+			<img v-bind:src="imgsrc" width="512px">
+	</div>
+	
+	<script src="js/template.js"></script>
+
+   </body>
+</html>

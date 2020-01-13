@@ -1,0 +1,49 @@
+<html>
+   <head>
+      <title>VueJs Introduction</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+   <!--computed property -->
+<div id="cProp">
+   <input type="text" v-model="firstname"><br><br>
+   <input type="text" v-model="lastname"><br><br>
+   <h1>{{firstname}}</h1>
+   <h1>{{lastname}}</h1>
+hence the Full name is: <span style="color:rgba(0,90,123,0.8)">{{getFullName}}</span>	
+   
+ </div>
+ <!-- diffence between the method and the function  -->
+<div id="cFmethod">
+	<h4 style="color:rgba(218,224,122)">this is the computed ={{getNum}}</h4>
+	<h4 style="color:rgba(218,129,122)">this is the function ={{getNum1()}}</h4>
+		<h4 style="color:rgba(218,224,122)">this is the computed ={{getNum}}</h4>
+	<h4 style="color:rgba(218,129,122)">this is the function ={{getNum1()}}</h4>
+
+	<h4 style="color:rgba(218,224,122)">this is the computed ={{getNum}}</h4>
+	<h4 style="color:rgba(218,129,122)">this is the function ={{getNum1()}}</h4>
+	<h4 style="color:rgba(218,224,122)">this is the computed ={{getNum}}</h4>
+	<h4 style="color:rgba(218,129,122)">this is the function ={{getNum1()}}</h4>
+
+</div>
+<!-- set and the get method -->
+<h1>Get Method</h1>
+<div id="gMethod">
+<input type="text" v-model="pName">
+<h2>{{firstname}}</h2>
+<h2>{{lastname}}</h2>
+</div>
+<h1>Set Method</h1>
+<div id="sMethod">
+<input type="text" v-model="pName">
+<h2>{{firstname}}</h2>
+<h2>{{lastname}}</h2>
+
+</div>
+
+ 
+	
+	<script src="js/computed.js"></script>
+
+   </body>
+</html>

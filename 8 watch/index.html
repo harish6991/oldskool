@@ -1,0 +1,37 @@
+<html>
+   <head>
+      <title>VueJs Introduction</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+  <!-- watch Property -->
+  <div id="wProp">
+  KiloMeter:<input type="text" v-model="kmeter"><br><br> 
+  Meter:<input type="text" v-model="meter">
+ </div>
+ 
+	<script>
+		var vm_1=new Vue({
+			el:"#wProp",
+			data:{
+			kmeter:0,
+			meter:0
+			},
+			watch:{
+			kmeter:function(val){
+				this.kmeter=val;
+				this.meter=val*1000
+			},
+			meter:function(val){
+				this.meter=val;
+				this.kmeter=val/1000;
+			}
+			}
+		
+		})
+	
+	
+	</script>
+ 
+   </body>
+</html>

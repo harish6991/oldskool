@@ -1,0 +1,62 @@
+<html>
+   <head>
+      <title>VueJs Introduction</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+     <!-- practical example  of the  method setting  constructor method and get and the set method-->
+		
+			<script>
+			var calc=new Vue({
+				
+				data:{a:2},
+				computed:{
+					aSum:function(){
+					
+						return this.a+5;
+					
+					},
+					aSquare:{
+						get:function(){
+						return this.a*this.a
+						},
+						set:function(v){
+							this.a=v		
+						}
+					
+					}
+				
+				
+				}
+			
+			
+			
+			})
+
+		console.log(calc.aSquare)
+					
+			</script>	
+	
+	  <!--- setting up using the methods -->
+	  
+	  <script>
+	  var sm=new Vue({
+		data:{a:3},
+		methods:{
+			aSum:function(){
+				this.a *=this.a
+			
+			}
+		
+		}
+			
+	  
+	  })
+	  sm.aSum()
+	console.log(sm.a);	
+	  </script>
+	  
+	  
+	  
+   </body>
+</html>

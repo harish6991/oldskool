@@ -1,0 +1,44 @@
+<html>
+   <head>
+      <title>VueJs Introduction</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+     <!-- practical example  of the  direct-instance -->
+		
+		<h1 id='test'>
+			
+		</h1>
+		
+		<script>
+			var _obj={fname:'harish',lname:'rana'}
+			var tester=new Vue({
+			el:'#test',
+			data:_obj
+			
+			})
+			console.log(tester.fname);
+			console.log(tester.$data)
+			console.log(tester.$data.lname)
+		</script>
+	<!-- using the Vue.extend()-->
+
+	<script>
+		var _obj = {food:'chinese',dress:'plazzo'}
+		var tester=Vue.extend({
+		 data:function(){
+		 return _obj
+		 
+		 }
+		
+		})	
+	var container=new tester();
+		console.log(container.food);
+		console.log(container.$data)
+		
+	</script>
+		
+	
+	  
+   </body>
+</html>

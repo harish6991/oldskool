@@ -1,0 +1,38 @@
+<html>
+   <head>
+      <title>VueJs Introduction</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+     <!-- pratiical example of the instance -->
+
+	<div id="insta">
+		
+		<h1>{{fname}}</h1>
+		<h1>{{lname}}</h1>
+		<h3>{{printer()}}</h3>
+	</div>
+	 
+	<script>
+	var Tester=new Vue({
+		el:'#insta',
+		data:{
+		fname:'harish',
+		mname:'sing',
+		lname:'rana'	
+		},
+		methods:{
+			printer:function(){
+				
+				return "My name is "+this.fname+" "+this.lname;
+			
+			}
+		}
+		
+	})
+	
+</script>
+	
+	  
+   </body>
+</html>

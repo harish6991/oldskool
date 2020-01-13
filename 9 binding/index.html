@@ -1,0 +1,148 @@
+<html>
+   <head>
+      <title>VueJs Introduction</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+<!-- binding Property -->
+
+      <style>
+         .info {
+            color: #00529B;
+            background-color: #BDE5F8;
+         }
+         div {
+            margin: 10px 0;
+            padding: 12px;
+         }
+         .active {
+            color: #4F8A10;
+            background-color: #DFF2BF;
+         }
+         .displayError{
+            color: #D8000C;
+            background-color: #FFBABA;
+         }
+      </style>
+
+<!-- binding the link -->
+	<div id="linker">
+			<center><h1>{{title}}</h1></center>
+			<h3><a v-bind:href='connecter' target="_blank">Click Me</a></h3>
+		<!--	<h3><a href={{connecter}} >Click Me</a></h3> -->
+			<h3><a>Click Me</a></h3>
+			
+	
+	</div>
+	
+	
+	
+	
+<!-- binding the class -->	
+		
+	<div id="classer">
+			<center><h1>{{title}}</h1></center>
+		<h3 v-bind:class="{info:isActive}">this is test</h3>
+	
+	</div>
+
+<!-- hasError  property  checker-->
+	<div id="propChecker">
+		<center><h2>{{title}}</h2></center>
+		<div v-bind:class="{active:isActive,displayError:hasError}">Checking The Error</div>
+	</div>
+	
+<!-- checking via the array method -->
+
+
+<div id="arrayChecker">
+		<center><h2>{{title}}</h2></center>
+		<div v-bind:class='[error,info]'>this is the Array Method </div>
+</div>	
+
+<!--checking the array method via ternary operator -->
+
+<div id="tChecker">
+	<center><h2>{{title}}</h2></center>
+	<div v-bind:class='[isActive?info:"",hasError?error:""]'>this is the test</div>
+
+</div>
+<!-- checking via the Template binding --->
+<div id="cCompt">
+		<div>
+		<center><h2>{{title}}</h2></center>
+			<oldmonk class="active"></oldmonk>
+		</div>
+	
+</div>
+<!-- checking via the Template binding and usning the vbind class --->
+<div id="vCompt">
+	<div>
+	
+	<center><h2>{{title}}</h2></center>
+	<buma v-bind:class='{active:isActive}'></buma>
+	</div>
+</div>
+<!--the method for the style inline -->
+
+<div id="iStyler">
+	<center><h2>{{title}}</h2></center>
+	<div v-bind:style='{backgroundColor:color,fontSize:size+"px"}'> This is the testing the inline style</div>
+</div>
+
+<!-- the method of binding the css via data -->
+
+
+<div id="oStyler">
+	<center><h2>{{title}}</h2></center>
+	<div v-bind:style='styler'>this is the testing the module 123</div>
+</div>
+<!--method of bindig the form element -->
+
+<div id="fElementer">
+  <center><h2>{{title}}</h2></center>
+  <div>
+<input v-model="inputer">{{inputer}}</div>
+<div>
+<textarea v-model="texter">Enter the Text</textarea>
+{{texter}}
+<div>
+<input type="checkbox" v-model='checker'>{{checker}}
+</div>
+
+</div>
+
+</div>
+<!-- binding the data form element -->
+<div id="binder">
+<center class="info"><h2>{{title}}</h2></center>
+<input type="radio" value="balck" v-model="picked">Black
+<input type="radio" value="white" v-model="picked">white<br>
+the Color That has been picked is :{{picked}}
+<hr>
+<select v-model="language">
+	<option disabled  value=" ">Please Select One</option>
+	<option>Java</option>
+	<option>Php</option>
+	<option>c++</option>
+	<option>Python</option>
+</select>
+<hr>
+Languae has been selected is :{{language}}
+</div>
+<hr><hr><hr>
+
+
+<div id="tMethod">
+<span style="font-size:30px">Enter the Age</span><input v-model.number="age" type="number"> 
+<h1>{{age}}</h1><br>
+<span style="font-size:30px">Enter the Message</span><input v-model.lazy="msg">
+<h1>{{msg}}</h1><br>
+<span style="font-size:30px">Enter the Message</span><input v-model.trim="message">
+<h1>{{message}}</h1><br>
+</div>
+
+	
+<script src="js/binding.js"></script>
+   </body>
+</html>

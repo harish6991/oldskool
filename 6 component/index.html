@@ -1,0 +1,33 @@
+<html>
+   <head>
+      <title>VueJs Introduction</title>
+      <script type = "text/javascript" src = "js/vue.js"></script>
+   </head>
+   <body>
+   
+   <!-- making of the tamplate using the using Container -->
+		<div id="one">
+			<container></container>
+		
+		</div>
+		<div id="two">
+			<container></container>
+		</div>
+		<!-- local assignment -->
+		<div id="local">
+		
+			<content1></content1>
+		</div>
+	<!--dynamic allocation iof the content  -->
+		<div id="tester">
+			<h3><dyna></dyna></h3>
+		</div>
+	<!--dynamic content usig the component -->	
+	<div id="databinding">
+		<component v-bind:is="view"></component>
+	</div>
+	
+	<script src="js/component.js"></script>
+
+   </body>
+</html>
